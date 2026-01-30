@@ -1,0 +1,128 @@
+/* ===== GLOBAL SMOOTHNESS ===== */
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    animation: fadeInBody 0.8s ease-in-out;
+}
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== HERO ANIMATION ===== */
+.contact-hero {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    animation: slideDown 0.8s ease forwards;
+}
+
+.contact-hero p {
+    animation: slideUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== CONTACT CARDS ===== */
+.contact-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.contact-card:nth-child(1) { animation-delay: 0.2s; }
+.contact-card:nth-child(2) { animation-delay: 0.4s; }
+.contact-card:nth-child(3) { animation-delay: 0.6s; }
+
+.contact-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    font-size: 36px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* ===== FORM ANIMATION ===== */
+form input,
+form textarea {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.4);
+    transform: scale(1.02);
+}
+
+/* ===== BUTTON ===== */
+.btn-custom {
+    background: #0d6efd;
+    border-radius: 30px;
+    padding: 10px 35px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: #0b5ed7;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.4);
+}
+
+/* ===== FADE UP ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== FOOTER ===== */
+footer {
+    animation: fadeUp 0.8s ease forwards;
+}
