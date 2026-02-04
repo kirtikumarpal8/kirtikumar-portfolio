@@ -252,3 +252,12 @@ footer a {
 footer a:hover {
     color: #0d6efd;
 }
+.small-card i,
+.small-card img {
+    transition: transform 0.4s ease;
+}
+
+.small-card:hover i,
+.small-card:hover img {
+    transform: rotate(5deg) scale(1.1);
+}
